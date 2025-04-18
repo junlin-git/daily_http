@@ -67,9 +67,6 @@
 ---
 
 
-
-markdown
-复制
 # RTSP（实时流传输协议）深度解析
 
 ## 目录
@@ -90,6 +87,7 @@ markdown
 - **RFC标准**: [RFC 2326](https://tools.ietf.org/html/rfc2326) (1998)  
 - **核心功能**: 媒体流的远程控制（播放/暂停/录制）  
 - **协议定位**:  
+
   ```mermaid
   graph LR
   A[控制层-RTSP] --> B[传输层-TCP/UDP]
@@ -102,15 +100,15 @@ markdown
 扩展性	支持自定义头部（如x-Accept-Authentication）
 核心架构
 协议栈组成
+
 mermaid
-复制
 graph TD
     RTSP -->|控制命令| TCP/UDP
     RTP -->|媒体数据| UDP
     RTCP -->|质量控制| UDP
 会话状态机
+
 mermaid
-复制
 stateDiagram-v2
     [*] --> Init
     Init --> Ready: DESCRIBE
@@ -122,8 +120,8 @@ stateDiagram-v2
     Ready --> [*]: TEARDOWN
 详细工作流程
 完整会话示例
+
 mermaid
-复制
 sequenceDiagram
     participant C as Client
     participant S as Server
@@ -148,6 +146,7 @@ sequenceDiagram
     
     C->>S: TEARDOWN rtsp://example.com/live RTSP/1.0
     S-->>C: 200 OK
+
 关键阶段说明
 连接协商
 
@@ -176,7 +175,7 @@ Range头部支持时间点定位
 协议报文分析
 典型请求头
 http
-复制
+
 PLAY rtsp://example.com/live RTSP/1.0
 CSeq: 312
 Session: 123456
@@ -215,8 +214,8 @@ SRTP
 
 实战应用案例
 海康威视摄像头URL格式
+
 bash
-复制
 rtsp://[username]:[password]@[ip]:[port]/[codec]/[channel]/[subtype]/av_stream
 参数说明：
 
@@ -227,8 +226,8 @@ channel: 通道号（如ch1）
 subtype: main（主码流）/sub（子码流）
 
 FFmpeg拉流命令
+
 bash
-复制
 ffmpeg -rtsp_transport tcp -i "rtsp://admin:12345@192.168.1.64:554/h264/ch1/main/av_stream" -c copy output.mp4
 常见问题排查
 连接问题诊断表
@@ -238,8 +237,7 @@ ffmpeg -rtsp_transport tcp -i "rtsp://admin:12345@192.168.1.64:554/h264/ch1/main
 媒体流卡顿	网络丢包	使用Wireshark分析RTP丢包率
 客户端无法解析SDP	SDP格式错误	验证SDP的m=行格式是否正确
 Wireshark过滤规则
-text
-复制
+
 rtsp || rtsp.request.method == "SETUP" || rtsp.response.code == 200
 未来演进方向
 Web集成
