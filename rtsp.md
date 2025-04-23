@@ -88,10 +88,12 @@
 - **核心功能**: 媒体流的远程控制（播放/暂停/录制）  
 - **协议定位**:  
 
-  ```mermaid
+```mermaid
   graph LR
   A[控制层-RTSP] --> B[传输层-TCP/UDP]
   C[数据层-RTP/RTCP] --> B
+```
+
 关键特性
 特性	说明
 网络适应性	支持单播(Unicast)/多播(Multicast)
@@ -101,14 +103,16 @@
 核心架构
 协议栈组成
 
-mermaid
+```mermaid
 graph TD
     RTSP -->|控制命令| TCP/UDP
     RTP -->|媒体数据| UDP
     RTCP -->|质量控制| UDP
-会话状态机
 
-mermaid
+```
+# 会话状态机
+
+```mermaid
 stateDiagram-v2
     [*] --> Init
     Init --> Ready: DESCRIBE
@@ -119,9 +123,11 @@ stateDiagram-v2
     Paused --> Ready: TEARDOWN
     Ready --> [*]: TEARDOWN
 详细工作流程
+```
+
 完整会话示例
 
-mermaid
+```mermaid
 sequenceDiagram
     participant C as Client
     participant S as Server
@@ -134,10 +140,10 @@ sequenceDiagram
     S-->>C: 200 OK (Content-Type: application/sdp)
     
     C->>S: SETUP rtsp://example.com/live/track1 RTSP/1.0
-    S-->>C: 200 OK (Session: 123456; Transport: RTP/AVP;client_port=6000-6001)
+    S-->>C: 200 OK (Session: 123456 ； Transport: RTP/AVP ；client_port=6000-6001)
     
     C->>S: PLAY rtsp://example.com/live RTSP/1.0
-    S-->>C: 200 OK (RTP-Info: url=...;seq=1000)
+    S-->>C: 200 OK (RTP-Info: url=...；seq=1000)
     
     loop RTP传输
         S->>C: RTP Packet (SSRC=0x1234)
@@ -146,9 +152,15 @@ sequenceDiagram
     
     C->>S: TEARDOWN rtsp://example.com/live RTSP/1.0
     S-->>C: 200 OK
+```
+
 
 关键阶段说明
+---
+
+
 连接协商
+
 
 客户端通过OPTIONS探测服务端能力
 
