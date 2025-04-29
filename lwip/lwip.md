@@ -1,4 +1,5 @@
 
+### 野火地址 https://doc.embedfire.com/products/link/zh/latest/module/wifi_bluetooth/esp8266.html
 ### Lwip 下载地址 https://github.com/lwip-tcpip/lwip
 ### Lwip 文档地址 https://www.nongnu.org/lwip/2_1_x/globals.html
 ```mermaid
@@ -26,12 +27,19 @@ end
 ![alt text](image.png)
 
 
+# ARP  Address Resolution Protocol地址解析协议
+
+用户通讯只需要知道IP地址，ARP 协议就提供优质的地址动态解析的机制，让 32 位的 IP 地址能映射成为 48 位的 MAC 地址
+
+
+
 ## LwIP 使用一个数据结构netif 来描述一个网卡
 LwIP 提供统一的接口，但是底层的实现需要用户自己去完成，比如网卡的初始化，网卡的收发数据，当 LwIP 底层得到了网络的数据之后，才会传入内核中去处理；同理，LwIP 内核需要发送一个数据包的时候，也需要调用网卡的发送函数
 
 
-# ARP  Address Resolution Protocol地址解析协议
-### 用户通讯只需要知道IP地址，ARP 协议就提供优质的地址动态解析的机制，让 32 位的 IP 地址能映射成为 48 位的 MAC 地址
+
+# IP 协议（Internet Protocol）
+IP 协议是一种无连接的不可靠数据报交付协议，协议本身不提供任何的错误检查与恢复机制
 
 
 # Lwip 有三种接口RAW/Callback API, NETCONN API 和 SOCKET API 的比较
