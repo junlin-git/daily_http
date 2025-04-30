@@ -33,18 +33,36 @@ sudo reboot
 ```
 
 ### 注意，编译KO模块如果版本号不一样，会内核KO加载失败或系统崩溃
-编译 certs 错误解决办法
 
-scripts/config --disable SYSTEM_TRUSTED_KEYS
-scripts/config --disable SYSTEM_REVOCATION_KEYS
+### 编译 
+
+```
+make[3]: *** No rule to make target 'debian/canonical-certs.pem', 
+needed by 'certs/x509_certificate_list'.  Stop.
 
 
+可以禁用配置
+sudo scripts/config --disable SYSTEM_TRUSTED_KEYS
+sudo scripts/config --disable SYSTEM_REVOCATION_KEYS
+make mrproper 等于 make disclean web
 
-`
-显示启动选项 sudo nano /etc/default/grub 
-把 GRUB_DEFAULT=0 改为  1
-启动选项 sudo update-grub来更新GRUB配置。
-`
+或者
+openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes
+然后在内核中
+然后在内核配置中指定路径：
+CONFIG_SYSTEM_TRUSTED_KEYS="path/to/cert.pem"
+
+--------------------------------------------
+
+或者
+
+进入 Cryptographic API → Certificates for signature checking
+清空以下选项的字段：
+
+Additional X.509 keys for default system keyring
+Additional X.509 keys for secondary system keyring
+
+系统会自己生成,其实是让系统然后在内核配置中指定路径
 
 ```
 diff命令
@@ -68,7 +86,10 @@ diff命令
         -q：只报告文件是否相同，不显示具体的差异。
 
         -s：如果文件相同则报告，否则不输出任何内容。
-`
-
 
 ```
+
+
+export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/
+
+sudo ldconfig  更新库依赖
