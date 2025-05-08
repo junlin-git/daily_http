@@ -108,3 +108,12 @@ topic read $SYS/#       # 允许订阅系统主题
 ```
 
 ### 3.4 mosquitto.log 用于保存LOG
+
+
+### 客户端下载 MQTTX
+
+```
+https://www.emqx.com/en/downloads/MQTTX
+
+
+```
