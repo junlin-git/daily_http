@@ -1,0 +1,9 @@
+user junlin
+topic readwrite sensors/#
+
+# 允许发布以test开头的主题
+topic read $SYS/#       
+
+# 允许订阅系统主题
+
+#说明 #必须环行

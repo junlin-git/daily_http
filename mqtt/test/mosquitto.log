@@ -1,0 +1,8 @@
+1746696652: mosquitto version 2.0.21 starting
+1746696652: Config loaded from ./mosquitto.conf.
+1746696652: Error: Invalid ACL topic "sensors/#      # 允许发布以test开头的主题" in acl_file "/home/junlin/opensource/mosquitto/build/install/test/aclfile".
+1746696652: Error opening acl file "/home/junlin/opensource/mosquitto/build/install/test/aclfile".
+1746696751: mosquitto version 2.0.21 starting
+1746696751: Config loaded from ./mosquitto.conf.
+1746696751: Error: Invalid ACL topic "sensors/#      # 允许发布以test开头的主题" in acl_file "/home/junlin/opensource/mosquitto/build/install/test/aclfile".
+1746696751: Error opening acl file "/home/junlin/opensource/mosquitto/build/install/test/aclfile".
