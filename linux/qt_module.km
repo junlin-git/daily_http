@@ -1,0 +1,266 @@
+{
+    "root": {
+        "data": {
+            "id": "d9qff1bd2g00",
+            "created": 1746671629758,
+            "text": "qt_module"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "d9qff8wt3yo0",
+                    "created": 1746671646292,
+                    "text": "核心与基础​​",
+                    "font-size": 16,
+                    "layout": null
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d9qffmwllkg0",
+                            "created": 1746671676754,
+                            "text": "qtbase-everywhere-src​​\n\nQt的核心模块，提供基础功能：GUI框架（Widgets/QML）、网络、文件I/O、多线程、SQL数据库访问等。所有其他模块均依赖此模块。",
+                            "layout": null
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d9qfgkhcyk00",
+                    "created": 1746671749843,
+                    "text": "兼容性与迁移​​​",
+                    "layout": null
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d9qfgzv0lp40",
+                            "created": 1746671783321,
+                            "text": "qt5compat-everywhere-src​​\n\nQt5兼容层，帮助旧代码迁移到Qt6，保留部分Qt5 API（如Qt.labs模块的QML组件）。",
+                            "layout": null
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d9qfh1km7jk0",
+                    "created": 1746671787046,
+                    "text": "3D图形与渲染​​",
+                    "layout": null
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d9qfis3qk7c0",
+                            "created": 1746671923162,
+                            "text": "​qt3d-everywhere-src​​\n\n3D图形框架，支持实体渲染、材质、光照、摄像机控制，基于OpenGL/Vulkan。\n​​qtquick3d-everywhere-src​​\n\n在QML中集成3D渲染，简化3D场景创建（如导入3D模型、粒子效果）。\n​​qtquick3dphysics-everywhere-src​​\n\n为Qt Quick 3D添加物理引擎（如刚体动力学、碰撞检测）。\n​​qtshadertools-everywhere-src​​\n\n着色器管理工具，支持GLSL编译和跨平台着色器优化。",
+                            "layout": null
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d9qfhf6qxjc0",
+                    "created": 1746671816682,
+                    "text": "用户界面与交互​​",
+                    "layout": null
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d9qfjstvayg0",
+                            "created": 1746672003107,
+                            "text": "qtdeclarative-everywhere-src​​\n\nQt Quick框架，使用QML语言构建动态、声明式UI。\n​​qtvirtualkeyboard-everywhere-src​​\n\n虚拟键盘组件，支持触摸屏设备的软键盘输入。\n​​qtquickeffectmaker-everywhere-src​​\n\n可视化工具，用于创建和调试QML中的图形特效（如模糊、阴影）。\n​​qtquicktimeline-everywhere-src​​\n\n时间线动画支持，通过时间轴控制QML属性的动态变化。",
+                            "layout": null
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d9qfhfmj7s00",
+                    "created": 1746671817637,
+                    "text": "设备与硬件集成​​",
+                    "layout": null
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d9qfmmkbkxk0",
+                            "created": 1746672224561,
+                            "text": "​qtconnectivity-everywhere-src​​\n\n蓝牙/NFC设备管理（如扫描设备、数据传输）。\n​​qtsensors-everywhere-src​​\n\n访问硬件传感器（加速度计、陀螺仪、环境光传感器）。\n​​qtserialport-everywhere-src​​\n\n串口通信（RS-232），用于工业设备或嵌入式系统。\n​​qtserialbus-everywhere-src​​\n\n工业总线协议支持（CAN、Modbus），适用于自动化控制系统。",
+                            "layout": null
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d9qfhg88now0",
+                    "created": 1746671818949,
+                    "text": "多媒体与动画",
+                    "layout": null
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d9qfkzpi9mo0",
+                            "created": 1746672096445,
+                            "text": "​qtmultimedia-everywhere-src​​\n\n多媒体处理（音频/视频播放、摄像头访问、录音）。\n​​qtlottie-everywhere-src​​\n\nLottie动画渲染，支持JSON格式的矢量动画（如After Effects导出文件）。\n​​qtspeech-everywhere-src​​\n\n文本到语音（TTS）和语音识别功能，支持系统原生语音引擎。",
+                            "layout_left_offset": {
+                                "x": -616.666642162536,
+                                "y": -85.83332992262328
+                            },
+                            "layout": null
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d9qfhgp8g1c0",
+                    "created": 1746671819977,
+                    "text": "​数据可视化​​",
+                    "layout": null
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d9qfkmqjtp40",
+                            "created": 1746672068209,
+                            "text": "​qtcharts-everywhere-src​​\n\n2D图表库（折线图、柱状图、饼图），支持交互与动态更新。\n​​qtdatavis3d-everywhere-src​​\n\n三维数据可视化（曲面图、散点图、体积渲染），适用于科学计算。\n​​qtgraphs-everywhere-src​​\n\n图形结构可视化（如树状图、网络拓扑图），用于数据分析场景。",
+                            "layout": null
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d9qfi1g2r9c0",
+                    "created": 1746671865135,
+                    "text": "​地理与定位​​",
+                    "layout": null
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d9qfn13qs7s0",
+                            "created": 1746672256210,
+                            "text": "​qtpositioning-everywhere-src​​\n\n获取地理位置信息（GPS、Wi-Fi定位），提供坐标数据。\n​​qtlocation-everywhere-src​​\n\n地图显示、地理编码（地址转坐标）、路径规划（需后端服务支持）。",
+                            "layout": null
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d9qfi53riag0",
+                    "created": 1746671873098,
+                    "text": "Web集成​​",
+                    "layout": null
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d9qfn973bvk0",
+                            "created": 1746672273827,
+                            "text": "​qtwebengine-everywhere-src​​\n\n基于Chromium的Web浏览器引擎，支持完整网页渲染与JavaScript执行。\n​​qtwebview-everywhere-src​​\n\n轻量级Web视图，使用系统原生Web组件（如Android WebView）。",
+                            "layout": null
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d9qfi9dvf2g0",
+                    "created": 1746671882416,
+                    "text": "工具与开发支持​​",
+                    "layout": null
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d9qfnhjne3c0",
+                            "created": 1746672292001,
+                            "text": "​qttools-everywhere-src​​\n\n开发工具集：Qt Designer（UI设计）、Linguist（国际化）、Assistant（文档查看器）。\n​​qtdoc-everywhere-src​​\n\nQt框架的离线文档和示例代码。\n​​qttranslations-everywhere-src​​\n\n多语言翻译文件，支持应用国际化（i18n）。",
+                            "layout": null
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d9qfidraajs0",
+                    "created": 1746671891935,
+                    "text": "​系统与平台集成​​",
+                    "layout": null
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d9qfo3qebq80",
+                            "created": 1746672340298,
+                            "text": "​qtactiveqt-everywhere-src​​\n\nWindows平台ActiveX控件支持，允许Qt与COM组件交互。\n​​qtwayland-everywhere-src​​\n\nWayland显示协议支持（替代X11），用于Linux桌面环境。\n​​qtimageformats-everywhere-src​​\n\n扩展图像格式支持（WebP、TIFF、JPEG 2000）。",
+                            "layout": null
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d9qfihw2x0g0",
+                    "created": 1746671900933,
+                    "text": "​其他功能模块​​",
+                    "layout": null
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d9qfoaxkjgo0",
+                            "created": 1746672355969,
+                            "text": "qtremoteobjects-everywhere-src​​\n\n分布式对象通信（IPC/RPC），支持跨进程或设备共享对象。\n​​qtscxml-everywhere-src​​\n\nSCXML状态机实现，用于复杂状态逻辑管理（如工作流控制）。\n​​qtlanguageserver-everywhere-src​​\n\n语言服务器协议（LSP）支持，为IDE提供代码智能提示和语法分析。",
+                            "layout": null
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d9qfllvzd680",
+                    "created": 1746672144725,
+                    "text": "网络与通信",
+                    "layout": null
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d9qflqqfip40",
+                            "created": 1746672155274,
+                            "text": "qtnetworkauth-everywhere-src​​\n\nOAuth 1.0/2.0认证协议支持，用于第三方API授权（如社交媒体登录）。\n​​qtwebsockets-everywhere-src​​\n\nWebSocket协议实现，支持实时双向通信（如聊天应用）。\n​​qtgrpc-everywhere-src​​\n\ngRPC框架集成，用于高性能RPC通信（基于HTTP/2和Protocol Buffers）。\n​​qthttpserver-everywhere-src​​\n\n轻量级HTTP服务器，处理REST API请求或静态文件服务。\n​​qtwebchannel-everywhere-src​​\n\nQt与Web页面（JavaScript）间的双向通信桥梁，通常与WebEngine配合使用。",
+                            "layout": null
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "classic-compact",
+    "version": "1.4.43"
+}
