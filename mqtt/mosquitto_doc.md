@@ -33,7 +33,7 @@ mosquitto -c /etc/mosquitto/mosquitto.conf -v  # -v显示详细日志
 
  ```
 
-/mosquitto_sub -h 127.0.0.1 -t "sensors/temperature"  -u junlin -P a -q 1
+./mosquitto_sub -h 127.0.0.1 -t "sensors/temperature"  -u junlin -P a -q 1
 
 ```
 #### 说明 :
