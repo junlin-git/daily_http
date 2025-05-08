@@ -1,15 +1,42 @@
+###  官网地址 https://www.kernel.org/
+### 文档地址 https://docs.kernel.org/
+
+
 ### linux 各个版本的内核下载地址 https://kernel.googlesource.com/pub/scm/linux/kernel/git/stable/linux.git/+refs
 
 ### 版本下载地址 https://kernel.googlesource.com/pub/scm/linux/kernel/git/stable/linux.git/+archive/refs/heads/
 
+
+
+### 编译ubuntu内核需要安装
+
+### 一般内核是缺失源码 需要重新下载或安装
+
+```
+
+git clone https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
+
+```
+
+### 安装依赖
+
+```
+sudo cp /boot/你的配置  内核的.config
+sudo apt install bison
+sudo apt install flex
+sudo apt install libncurses-dev
+sudo apt install  pkg-config
+sudo apt-get install openssl libssl-dev
+sudo apt-get install binutils-dev
+sudo apt-get install libelf-dev
+
+
+```
+
 ### 编译对应的内核进行安装
 
 
-其中的系统配置在 arch/x86/configs/
-
-
-
-对应的内核版本号可以在 make menuconfig  中看
+其中的系统配置在 arch/x86/configs/ 其中对应的内核版本号可以在 make menuconfig  中看
 
 ```
 
@@ -64,32 +91,4 @@ Additional X.509 keys for secondary system keyring
 
 系统会自己生成,其实是让系统然后在内核配置中指定路径
 
-```
-diff命令
 
-        -b：忽略所有空白字符的差别，包括制表符和空格。
-
-        -B：忽略空白行。
-
-        -c：输出一个简短的摘要，包括每组不同的行的上下文。
-
-        -C n：输出每组不同的行及其前后 n 行的上下文。
-
-        -u：以统一格式输出，这是默认格式的改进版，常用于版本控制系统。
-
-        -w：忽略所有非字母数字字符，即只比较字母数字字符。
-
-        -y：以并排格式显示两个文件的不同之处。
-
-        -N：即使文件不存在也进行比较，如果文件在另一个文件中不存在，则认为文件内容为空。
-
-        -q：只报告文件是否相同，不显示具体的差异。
-
-        -s：如果文件相同则报告，否则不输出任何内容。
-
-```
-
-
-export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/
-
-sudo ldconfig  更新库依赖
