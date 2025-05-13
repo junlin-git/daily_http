@@ -27,15 +27,3 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib
 
 
 
-下载太慢
-
-```
-sudo apt-get install uget
-
-sudo apt-get install aria2
-
-配置 uget
-
---enable-rpc=true -D --disable-ipv6 --check-certificate=false
-
-```
