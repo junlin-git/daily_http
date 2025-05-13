@@ -1,13 +1,9 @@
-git command
+### vscode 安装
 
+Markdown Preview Mermaid Support
+vscode-mindmap
+C/C++ Extension Pack
 
-git reset --hard you_want version
-
-
-git tag 
-
-
-git checkout 对应的分支
 
 南京大学开源镜像站
 
@@ -32,7 +28,7 @@ https://download.qt.io/static/mirrorlist/mirmon/
 
 
 
-下载太慢
+### 下载太慢
 
 ```
 sudo apt-get install uget

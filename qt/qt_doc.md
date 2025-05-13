@@ -1,6 +1,13 @@
 
-### 编译QT6.7
+#### 下载地址
 
+https://download.qt.io/archive/qt/5.14/5.14.2/qt-opensource-linux-x64-5.14.2.run
+
+
+5.12 安装有问题，缺失很多库
+
+
+### 编译QT6.7
 
 ```
 sudo apt install libgl1-mesa-dev

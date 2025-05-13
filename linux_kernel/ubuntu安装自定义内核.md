@@ -29,6 +29,8 @@ sudo apt install  pkg-config
 sudo apt-get install openssl libssl-dev
 sudo apt-get install binutils-dev
 sudo apt-get install libelf-dev
+sudo apt install make
+sudo apt install make-guile 
 
 
 ```
@@ -50,9 +52,8 @@ sudo make modules_install # 安装模块
 
 sudo make install         # 安装内核
 
-sudo update-initramfs -c -k 6.8.12  # 替换为你的内核版本,读取当前系统的内核版本号,并在/boot目录下查找与该版本号匹配的内核映像文件和initramfs文件
 
-sudo update-grub  #重新生成GRUB的启动菜单配置文件
+sudo update-grub  #重新生成GRUB的启动菜单配置文件,6.14.6不用 make install 就自己安装
  
 sudo reboot
 
@@ -71,17 +72,6 @@ needed by 'certs/x509_certificate_list'.  Stop.
 可以禁用配置
 sudo scripts/config --disable SYSTEM_TRUSTED_KEYS
 sudo scripts/config --disable SYSTEM_REVOCATION_KEYS
-make mrproper 等于 make disclean web
-
-或者
-openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes
-然后在内核中
-然后在内核配置中指定路径：
-CONFIG_SYSTEM_TRUSTED_KEYS="path/to/cert.pem"
-
---------------------------------------------
-
-或者
 
 进入 Cryptographic API → Certificates for signature checking
 清空以下选项的字段：
@@ -90,5 +80,42 @@ Additional X.509 keys for default system keyring
 Additional X.509 keys for secondary system keyring
 
 系统会自己生成,其实是让系统然后在内核配置中指定路径
+
+
+其中内核模块也需要签名认证，需要关闭不让make module 的时候失败
+
+make menuconfig
+
+关闭
+Require modules to be validly signed 
+
+
+-----------------------------------------------
+或者
+openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes
+然后在内核中
+然后在内核配置中指定路径：
+CONFIG_SYSTEM_TRUSTED_KEYS="path/to/cert.pem"
+
+--------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

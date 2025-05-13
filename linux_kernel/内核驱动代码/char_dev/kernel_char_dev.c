@@ -84,7 +84,7 @@ static int __init simple_drv_init(void)
     }
 
     // 3. 创建设备类
-    drv_class = class_create( CLASS_NAME);
+    drv_class = class_create(CLASS_NAME);
     if (IS_ERR(drv_class)) {
         cdev_del(&my_cdev);
         unregister_chrdev_region(major_num, 1);
@@ -94,7 +94,7 @@ static int __init simple_drv_init(void)
 
     // 4. 创建设备节点
     device_create(drv_class, NULL, major_num, NULL, DEVICE_NAME);
-    printk(KERN_INFO "Driver loaded: major=%d\n", major_num);
+    printk(KERN_INFO "Driver loaded: major=%d DEVICE_NAME=%s\n", major_num,DEVICE_NAME);
     return 0;
 }
 
