@@ -21,7 +21,28 @@ diff命令
 
         -s：如果文件相同则报告，否则不输出任何内容。
 
+
 ```
+
+```
+find 查找文件的特定内容
+        find /   -type f -exec grep -l  "tonly_appmain" {} +
+
+```
+
+
+ssh使用
+
+```
+sshfs -p 30055  hejunlin@你的IP:/home/hejunlin /home/junlin/sshfs/
+
+
+ssh -p 30055 hejunlin@你的IP
+
+```
+
+引用 QT
+$$MY_PATH/
 
 
 export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/

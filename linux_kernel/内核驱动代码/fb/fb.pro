@@ -5,4 +5,5 @@ QMAKE_CFLAGS += -std=c99 # 正确的方式指定C标准
 
 
 SOURCES += \
-    kernel_char_dev.c
+    app_fb.c \
+    fb.c

@@ -1,4 +1,4 @@
-fb.o: fb.c \
+i2c.o: i2c.c \
  /home/junlin/opensource/linux-6.14.6/include/linux/compiler-version.h \
  /home/junlin/opensource/linux-6.14.6/include/linux/kconfig.h \
  /home/junlin/opensource/linux-6.14.6/include/generated/autoconf.h \
@@ -536,8 +536,6 @@ fb.o: fb.c \
  /home/junlin/opensource/linux-6.14.6/arch/x86/include/asm/module.h \
  /home/junlin/opensource/linux-6.14.6/include/asm-generic/module.h \
  /home/junlin/opensource/linux-6.14.6/arch/x86/include/asm/orc_types.h \
- /home/junlin/opensource/linux-6.14.6/include/linux/fb.h \
- /home/junlin/opensource/linux-6.14.6/include/uapi/linux/fb.h \
  /home/junlin/opensource/linux-6.14.6/include/linux/i2c.h \
  /home/junlin/opensource/linux-6.14.6/include/linux/acpi.h \
  /home/junlin/opensource/linux-6.14.6/include/linux/ioport.h \
@@ -686,11 +684,4 @@ fb.o: fb.c \
  /home/junlin/opensource/linux-6.14.6/include/linux/irqdomain_defs.h \
  /home/junlin/opensource/linux-6.14.6/include/linux/irqhandler.h \
  /home/junlin/opensource/linux-6.14.6/include/linux/of.h \
- /home/junlin/opensource/linux-6.14.6/include/uapi/linux/i2c.h \
- /home/junlin/opensource/linux-6.14.6/include/uapi/linux/vesa.h \
- /home/junlin/opensource/linux-6.14.6/arch/x86/include/asm/video.h \
- /home/junlin/opensource/linux-6.14.6/include/asm-generic/video.h \
- /home/junlin/opensource/linux-6.14.6/include/linux/of_device.h \
- /home/junlin/opensource/linux-6.14.6/include/linux/of_reserved_mem.h \
- /home/junlin/opensource/linux-6.14.6/include/linux/dma-mapping.h \
- /home/junlin/opensource/linux-6.14.6/include/linux/scatterlist.h
+ /home/junlin/opensource/linux-6.14.6/include/uapi/linux/i2c.h
